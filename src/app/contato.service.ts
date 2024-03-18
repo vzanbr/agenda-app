@@ -28,7 +28,6 @@ export class ContatoService {
     .set('size', size)
     return this.http.get<any>(`${this.url}?${params.toString()}`);
   }
-
   favourite(contato: Contato) : Observable<any> {
     return this.http.patch( `${this.url}/${contato.id}/favorito`, null );
   }
